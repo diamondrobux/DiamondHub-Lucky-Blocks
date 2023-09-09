@@ -1,0 +1,320 @@
+local Name = game.Players.LocalPlayer.Name
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Spawn = game.Players.LocalPlayer.SpawnCFrame
+local Window = OrionLib:MakeWindow({Name = "DiamondHub | ❓ LUCKY BLOCKS"})
+local P = game:GetService'Players'
+local HRP = P.LocalPlayer.Character.HumanoidRootPart
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+ 
+local Tab = Window:MakeTab({
+	Name = "FREE BLOCKS",
+	Icon = "rbxassetid://4483362458",
+	PremiumOnly = false
+})
+local Tab2 = Window:MakeTab({
+	Name = "Misc",
+	Icon = "rbxassetid://4483362458",
+	PremiumOnly = false
+})
+local Tab3 = Window:MakeTab({
+	Name = "Keybinds PC",
+	Icon = "rbxassetid://4483362458",
+	PremiumOnly = false
+})
+local Tab4 = Window:MakeTab({
+	Name = "Other",
+	Icon = "rbxassetid://4483362458",
+	PremiumOnly = false
+})
+ 
+---//SPAWNER
+Tab:AddLabel("FREE BLOCKS ❓")
+Tab:AddDropdown({
+	Name = "Spawn 1 Block",
+	Default = "Select Block",
+	Options = {"Select Block", "Lucky Block", "Super Block", "Diamond Block", "Rainbow Block","Galaxy Block"},
+	Callback = function(Value)
+		if Value == 'Lucky Block' then
+			ReplicatedStorage.SpawnLuckyBlock:FireServer()
+		end
+		if Value == 'Super Block' then
+			ReplicatedStorage.SpawnSuperBlock:FireServer()
+		end
+		if Value == 'Diamond Block' then
+			ReplicatedStorage.SpawnDiamondBlock:FireServer()
+		end
+		if Value == 'Rainbow Block' then
+			ReplicatedStorage.SpawnRainbowBlock:FireServer()
+		end
+		if Value == 'Galaxy Block' then
+			ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+		end
+	end})
+Tab:AddDropdown({
+	Name = "Spawn 5 Blocks",
+	Default = "Select Block",
+	Options = {"Select Block", "Lucky Block", "Super Block", "Diamond Block", "Rainbow Block","Galaxy Block"},
+	Callback = function(Value)
+		if Value == 'Lucky Block' then
+			for _ = 1,5 do
+				ReplicatedStorage.SpawnLuckyBlock:FireServer()
+			end
+		end
+		if Value == 'Super Block' then
+			for _ = 1,5 do
+				ReplicatedStorage.SpawnSuperBlock:FireServer()
+			end
+		end
+		if Value == 'Diamond Block' then
+			for _ = 1,5 do
+				ReplicatedStorage.SpawnDiamondBlock:FireServer()
+			end
+		end
+		if Value == 'Rainbow Block' then
+			for _ = 1,5 do
+				ReplicatedStorage.SpawnRainbowBlock:FireServer()
+			end
+		end
+		if Value == 'Galaxy Block' then
+			for _ = 1,5 do
+				ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+			end
+		end
+	end})
+ 
+Tab:AddDropdown({
+	Name = "Spawn 10 Blocks",
+	Default = "Select Block",
+	Options = {"Select Block", "Lucky Block", "Super Block", "Diamond Block", "Rainbow Block","Galaxy Block"},
+	Callback = function(Value)
+		if Value == 'Lucky Block' then
+			for _ = 1,5 do
+				ReplicatedStorage.SpawnLuckyBlock:FireServer()
+			end
+		end
+		if Value == 'Super Block' then
+			for _ = 1,10 do
+				ReplicatedStorage.SpawnSuperBlock:FireServer()
+			end
+		end
+		if Value == 'Diamond Block' then
+			for _ = 1,10 do
+				ReplicatedStorage.SpawnDiamondBlock:FireServer()
+			end
+		end
+		if Value == 'Rainbow Block' then
+			for _ = 1,10 do
+				ReplicatedStorage.SpawnRainbowBlock:FireServer()
+			end
+		end
+		if Value == 'Galaxy Block' then
+			for _ = 1,10 do
+				ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+			end
+		end
+	end})
+ 
+Tab:AddDropdown({
+	Name = "Spawn 20 Blocks",
+	Default = "Select Block",
+	Options = {"Select Block", "Lucky Block", "Super Block", "Diamond Block", "Rainbow Block","Galaxy Block"},
+	Callback = function(Value)
+		if Value == 'Lucky Block' then
+			for _ = 1,20 do
+				ReplicatedStorage.SpawnLuckyBlock:FireServer()
+			end
+		end
+		if Value == 'Super Block' then
+			for _ = 1,20 do
+				ReplicatedStorage.SpawnSuperBlock:FireServer()
+			end
+		end
+		if Value == 'Diamond Block' then
+			for _ = 1,20 do
+				ReplicatedStorage.SpawnDiamondBlock:FireServer()
+			end
+		end
+		if Value == 'Rainbow Block' then
+			for _ = 1,20 do
+				ReplicatedStorage.SpawnRainbowBlock:FireServer()
+			end
+		end
+		if Value == 'Galaxy Block' then
+			for _ = 1,20 do
+				ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+			end
+		end
+	end})
+ 
+Tab:AddLabel("SUPPORT ⬇️")
+Tab:AddButton({
+	Name = "https://discord.gg/pEfNGEANR5              (Click To Coppy)",
+	Callback = function()
+      	setclipboard('https://discord.gg/pEfNGEANR5')
+	end
+})
+Tab:AddButton({
+	Name = "https://discord.gg/PMCZs7ZMvR             (Click To Coppy)",
+	Callback = function()
+      	setclipboard('https://discord.gg/PMCZs7ZMvR')
+	end
+})
+local Section = Tab:AddSection({
+	Name = "Made by: TheComplexJason & Malikxdpro9"
+})
+---//MISC
+Tab2:AddLabel("FLY & ESP")
+Tab2:AddButton({
+	Name = "FLY",
+	Callback = function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/12PQEny3'))()
+    print("button pressed")
+  	end    
+})
+ 
+Tab2:AddButton({
+	Name = "ESP Player",
+	Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/zachisfunny/esp-unversal/main/script'))()
+    print("button pressed")
+  	end    
+})
+ 
+Tab2:AddLabel("TELEPORT")
+Tab2:AddTextbox({
+	Name = "Teleport to player",
+	Default = "Player Name",
+	TextDisappear = true,
+	Callback = function(Value)
+        local function TPToPlayer()
+            HRP.CFrame = workspace[Value].HumanoidRootPart.CFrame
+        end
+        TPToPlayer()
+	end	  
+})
+Tab2:AddButton({
+	Name = "Teleport to VoidBlock",
+	Callback = function()
+        local function GetNiggered()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.CenterBlocks.Givers.VoidGiver.GUI.CFrame
+        end
+        GetNiggered()
+	end
+})
+Tab2:AddButton({
+	Name = "Teleport to Safe spot",
+	Callback = function()
+        local function Cute()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Wedge.CFrame
+        end
+        Cute()
+	end
+})
+Tab2:AddButton({
+	Name = "Teleport to Base",
+	Callback = function()
+		local function Run()
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Spawn.Value
+		end
+		Run()
+	end
+})
+Tab2:AddButton({
+	Name = "Delete Trees",
+	Callback = function()
+        for _, Tree in next, game.Workspace:GetChildren() do
+            if Tree.Name == 'Tree' then
+                Tree:Destroy()
+            end
+        end
+	end
+})
+ 
+---//Keybinds
+Tab3:AddBind({
+	Name = "Lucky Block",
+	Default = Enum.KeyCode.Q,
+	Callback = function()
+		ReplicatedStorage.SpawnLuckyBlock:FireServer()
+	end    
+})
+Tab3:AddBind({
+	Name = "Super Block",
+	Default = Enum.KeyCode.E,
+	Callback = function()
+		ReplicatedStorage.SpawnSuperBlock:FireServer()
+	end    
+})
+Tab3:AddBind({
+	Name = "Diamond Block",
+	Default = Enum.KeyCode.R,
+	Callback = function()
+		ReplicatedStorage.SpawnDiamondBlock:FireServer()
+	end    
+})
+Tab3:AddBind({
+	Name = "Rainbow Block",
+	Default = Enum.KeyCode.T,
+	Callback = function()
+		ReplicatedStorage.SpawnRainbowBlock:FireServer()
+	end    
+})
+Tab3:AddBind({
+	Name = "Galaxy Block",
+	Default = Enum.KeyCode.Y,
+	Callback = function()
+		ReplicatedStorage.SpawnGalaxyBlock:FireServer()
+	end    
+})
+ 
+ 
+---//Other 
+Tab4:AddLabel("VERSION")
+Tab4:AddButton({
+	Name = "VERSION: 1.28",
+	Callback = function()
+  	end    
+})
+ 
+Tab4:AddLabel("DEVLOPERS")
+Tab4:AddButton({
+	Name = "#1 TheComplexJason                                (Click To Coppy)",
+	Callback = function()
+      	setclipboard('TheComplexJason')
+	end
+})
+Tab4:AddButton({
+	Name = "#2 Malikxdpro9                                         (Click To Coppy)",
+	Callback = function()
+      	setclipboard('Malikxdpro9')
+	end
+})
+ 
+Tab4:AddLabel("SUPPORT ⬇️")
+Tab4:AddButton({
+	Name = "https://discord.gg/pEfNGEANR5              (Click To Coppy)",
+	Callback = function()
+      	setclipboard('https://discord.gg/pEfNGEANR5')
+	end
+})
+Tab4:AddButton({
+	Name = "https://discord.gg/PMCZs7ZMvR             (Click To Coppy)",
+	Callback = function()
+      	setclipboard('https://discord.gg/PMCZs7ZMvR')
+	end
+})
+ 
+OrionLib:MakeNotification({
+	Name = "DiamondHub",
+	Content = "Script Actived Now ✅",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+OrionLib:MakeNotification({
+	Name = "DiamondHub",
+	Content = "Copied link to the discord server!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+setclipboard('https://discord.gg/pEfNGEANR5')
+OrionLib:Init() -- DiamondHub TEAM --
