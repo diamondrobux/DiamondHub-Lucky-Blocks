@@ -1,7 +1,7 @@
 local Name = game.Players.LocalPlayer.Name
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Spawn = game.Players.LocalPlayer.SpawnCFrame
-local Window = OrionLib:MakeWindow({Name = "DiamondHub | ❓ LUCKY BLOCKS"})
+local Window = OrionLib:MakeWindow({Name = "DiamondHub 💎 | ❓ LUCKY BLOCKS"})
 local P = game:GetService'Players'
 local HRP = P.LocalPlayer.Character.HumanoidRootPart
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
